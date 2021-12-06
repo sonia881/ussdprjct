@@ -25,32 +25,31 @@ def ussdApp(request):
         response =""
         #  main menu for our application
         if text == '':
-            response =  "CON Murakaza neza kuri Idafarm \n"
-            response += "1. Kwandikisha igihingwa \n"
-            response += "2. Kumenya ingengabihe \n"
+            response =  "CON Kugura no gutumiza imyenda n'inkweto by'abakobwa n'abagore \n"
+            response += "1. Kugura \n"
+            response += "2. Gutumiza \n"
         elif text == '1':
-
-            response = "CON Hitamo igihingwa \n"
-            response += "1. Ibinyomoro \n"
-            response += "2. Indimu"
+            response = "CON Hitamo \n"
+            response += "1. Imyenda \n"
+            response += "2. Inkweto \n"
         elif text == '1*1':
-            product="Ibinyomoro"
-            response = "CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
+            product="Imyenda"
+            response = "CON Hitamo ubwoko bw'umwenda' "+str(product)+"\n"
         elif category =='1*1' and int(len(level)) == 3 and str(level[2]) in  str(level):
-            response = "CON Uwo mubufatanyije \n"
+            response = "CON Ipantaro \n"
         elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
-            response = "CON Shyiramo nimero y'irangamuntu yuwo mufatanyije \n"
+            response = "CON Umupira cyangwa ishati \n"
         elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
-            response = "END Murakoze kwiyandikisha kuri Ida farm \n"
+            response = "Ikanzu \n"
 
 
         elif text == '1*2':
             product ="Indimu"
-            response ="CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
+            response ="CON ' "+str(product)+"\n"
         elif category =='1*2' and int(len(level)) == 3 and str(level[2]) in  str(level):
-            response = "CON Uwo mubufatanyije \n"
+            response = "CON  \n"
         elif category =='1*2' and int(len(level)) == 4 and str(level[3]) in  str(level):
-            response = "CON Shyiramo nimero y'irangamuntu yuwo mufatanyije \n"
+            response = "CON  \n"
         elif category =='1*2' and int(len(level)) == 5 and str(level[4]) in  str(level):
             response = "END Murakoze kwiyandikisha kuri Ida farm \n"
          
