@@ -35,16 +35,16 @@ def ussdApp(request):
         elif text == '1*1':
             product="Imyenda"
             response = "CON Hitamo ubwoko bw'umwenda' "+str(product)+"\n"
-        elif category =='1*1':
+        elif category =='1*1'and int(len(level)) == 3 and str(level[2]) in  str(level):
             response = "CON Ipantaro \n"
-        elif category =='1*1':
+        elif category =='1*1'and int(len(level)) == 4 and str(level[3]) in  str(level):
             response = "CON Umupira cyangwa ishati \n"
-        elif category =='1*1':
+        elif category =='1*1'and int(len(level)) == 5 and str(level[4]) in  str(level):
             response = "Ikanzu \n"
 
 
         elif text == '1*2':
-            product ="Indimu"
+            product ="Inkweto"
             response ="CON ' "+str(product)+"\n"
         elif category =='1*2' and int(len(level)) == 3 and str(level[2]) in  str(level):
             response = "CON  \n"
