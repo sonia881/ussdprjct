@@ -30,30 +30,30 @@ def ussdApp(request):
             response += "2. ORDERING AND DELIVERY \n"
         elif text == '1':
             response = "CON Hitamo \n"
-            response += "1. Closes \n"
+            response += "1. Clothes \n"
             response += "2. Shoes \n"
-        elif text == '1*1':
-            products= Productsmodel.objects.all()
-            response ="CON Hitamo umwenda"
-            for product in products:
-                response+= ""+str(product.id)+". "+str(product.title)+"\n"
-            response = "CON Choose type of clothes' "+str(product)+"\n" 
-            response = "1. Trousers\n" 
-            response = "2. Shirts, T- shirts or Tops \n" 
-            response = "3. Dresses \n"
-        elif text == '1*2':
-            response ="CON Choose type of shoes' "+str(product)+"\n"
-            response =" 1. male shoes \n"
-            response = " 2. female shoes\n" 
-        elif text == '2*1':
-            response = "CON Choose type of clothes' "+str(product)+"\n"
-            response =" 1. Trousers\n"
-            response = " 2. Shirts, T- shirts or Tops\n" 
-            response = " 3. Dresses\n"
-        elif text == '2*2':
-            response = "CON Choose type of shoes' "+str(product)+"\n" 
-            response += "1. Male shoes \n"
-            response += "2. Female shoes  \n"
+            if text == '1*1':
+                response = "CON Choose type of clothes" 
+                response = "1. Trousers\n" 
+                response = "2. Shirts, T- shirts or Tops \n" 
+                response = "3. Dresses \n"
+                if text == '1*2':
+                   response ="CON Choose type of shoes"
+                   response = " 1. male shoes \n"
+                   response = " 2. female shoes\n"
+        elif text =='2':
+            response = "CON Hitamo \n"
+            response += "1. Clothes \n"
+            response += "2. Shoes \n" 
+            if text == '2*1':
+                response = "CON Choose type of clothes"
+                response =" 1. Trousers\n"
+                response = " 2. Shirts, T- shirts or Tops\n" 
+                response = " 3. Dresses\n"
+            elif text == '2*2':
+                response = "CON Choose type of shoes" 
+                response += "1. Male shoes \n"
+                response += "2. Female shoes  \n"
         elif text == '2*1':
             response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe rimwe mukwezi"
         elif text == '2*2':
