@@ -26,48 +26,46 @@ def ussdApp(request):
         #  main menu for our application
         if text == '':
             response =  "CON Kugura no gutumiza imyenda n'inkweto by'abakobwa n'abagore \n"
-            response += "1. Kugura \n"
-            response += "2. Gutumiza \n"
+            response += "1. BUYING \n"
+            response += "2. ORDERING AND DELIVERY \n"
         elif text == '1':
             response = "CON Hitamo \n"
-            response += "1. Imyenda \n"
-            response += "2. Inkweto \n"
+            response += "1. Closes \n"
+            response += "2. Shoes \n"
         elif text == '1*1':
             products= Productsmodel.objects.all()
             response ="CON Hitamo umwenda"
             for product in products:
                 response+= ""+str(product.id)+". "+str(product.title)+"\n"
-            response = "CON Hitamo ubwoko bw'umwenda' "+str(product)+"\n" 
-            response = "1. Ipantaro \n" 
-            response = "2. Umupira cyangwa ishati \n" 
-            response = "3. Ikanzu \n"
+            response = "CON Choose type of clothes' "+str(product)+"\n" 
+            response = "1. Trousers\n" 
+            response = "2. Shirts, T- shirts or Tops \n" 
+            response = "3. Dresses \n"
         elif text == '1*2':
-            products= Productsmodel.objects.all()
-            product ="Inkweto"
+            products= Product1model.objects.all()
+            product ="Shoes"
             for product in products:
                 response+= ""+str(product.id)+". "+str(product.title)+"\n"
-            response ="CON Hitamo ubwoko bw'inkweto' "+str(product)+"\n"
-            response =" 1. \n"
-            response = " 2. \n" 
-            response = " 3. \n"
+            response ="CON Choose type of shoes' "+str(product)+"\n"
+            response =" 1. male shoes \n"
+            response = " 2. female shoes\n" 
         elif text == '2*1':
-            products= Productsmodel.objects.all()
-            product="imyenda"
+            products= Product2model.objects.all()
+            product="Clothes"
             for product in products:
                 response+= ""+str(product.id)+". "+str(product.title)+"\n"
-            response = "CON Hitamo ubwoko bw'umwenda' "+str(product)+"\n"
-            response =" 1. \n"
-            response = " 2. \n" 
-            response = " 3. \n"
+            response = "CON Choose type of clothes' "+str(product)+"\n"
+            response =" 1. Trousers\n"
+            response = " 2. Shirts, T- shirts or Tops\n" 
+            response = " 3. Dresses\n"
         elif text == '2*2':
-            products= Productsmodel.objects.all()
-            product="imyenda"
+            products= Product3model.objects.all()
+            product="Clothes"
             for product in products:
                 response+= ""+str(product.id)+". "+str(product.title)+"\n"
-            response = "CON Hitamo ubwoko bw'inkweto' "+str(product)+"\n" 
-            response += "1.  \n"
-            response += "2.  \n"
-            response += "3. \n"
+            response = "CON Choose type of shoes' "+str(product)+"\n" 
+            response += "1. Male shoes \n"
+            response += "2. Female shoes  \n"
         elif text == '2*1':
             response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe rimwe mukwezi"
         elif text == '2*2':
