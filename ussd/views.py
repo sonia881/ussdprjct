@@ -34,22 +34,39 @@ def ussdApp(request):
             response += "2. Shoes \n"
         elif text == '1*1':
             response = "CON Choose type of clothes \n " 
-            response += "1. Trousers\n" 
-            response += "2. Shirts, T- shirts or Tops \n" 
-            response += "3. Dresses \n"       
+            response += "1. Trousers\n"     
+            response += "2. Shirts \n" 
+            response += "3. Dresses \n"
+            response += "4. T-shirts \n"
+            response += "5. Tops \n"
+        elif text == '1*1*1':
+            response ="CON Which type\n"
+            response += "1. jeans \n"
+            response += "2. mampa\n "
+            response += " costumelike pants\n"
+        elif text =='1*1*1*1':
+            response ="CON Enter body measures"
+        elif text =='1*1*2':
+            response ="CON Enter body measures"
+        elif text =='1*1*2':
+            response ="CON Enter body measures"
+        elif text =='1*1*4':
+            response ="CON Enter body measures"
+        elif text =='1*1*5':
+            response ="CON Enter body measures"         
         elif text == '1*2':
             response ="CON Choose type of shoes \n"
-            response = " 1. male shoes \n"
-            response = " 2. female shoes\n"
+            response += " 1. male shoes \n"
+            response += " 2. female shoes\n"
         elif text =='2':
             response = "CON Hitamo \n"
             response += "1. Clothes \n"
             response += "2. Shoes \n" 
         elif text == '2*1':
             response = "CON Choose type of clothes \n"
-            response =" 1. Trousers\n"
-            response = " 2. Shirts, T- shirts or Tops\n" 
-            response = " 3. Dresses\n"
+            response +=" 1. Trousers\n"
+            response += " 2. Shirts, T- shirts or Tops\n" 
+            response += " 3. Dresses\n"
         elif text == '2*2':
             response = "CON Choose type of shoes \n" 
             response += "1. Male shoes \n"
