@@ -34,9 +34,9 @@ def ussdApp(request):
             response += "2. Shoes \n"
         elif text == '1*1':
             response = "CON Choose type of clothes \n " 
-            response = "1. Trousers\n" 
-            response = "2. Shirts, T- shirts or Tops \n" 
-            response = "3. Dresses \n"       
+            response += "1. Trousers\n" 
+            response += "2. Shirts, T- shirts or Tops \n" 
+            response += "3. Dresses \n"       
         elif text == '1*2':
             response ="CON Choose type of shoes \n"
             response = " 1. male shoes \n"
