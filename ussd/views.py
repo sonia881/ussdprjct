@@ -41,26 +41,33 @@ def ussdApp(request):
             response = "1. Ipantaro \n" 
             response = "2. Umupira cyangwa ishati \n" 
             response = "3. Ikanzu \n"
-
-
         elif text == '1*2':
+            products= Productsmodel.objects.all()
             product ="Inkweto"
-            response ="CON ' "+str(product)+"\n"
-        elif 
-            response = "CON  \n"
-        elif 
-            response = "CON  \n"
-        elif 
-
-        
-            response = "END Murakoze kwiyandikisha kuri Ida farm \n"
-         
-        #  ======================== INGENGABIHE==================
-        elif text == '2':
-            response = "CON Hitamo igihe \n "
-            response += "1. Rimwe mukwezi \n"
-            response += "2. Kabiri Mukwezi \n"
-            response += "3. Buri gihe"
+            for product in products:
+                response+= ""+str(product.id)+". "+str(product.title)+"\n"
+            response ="CON Hitamo ubwoko bw'inkweto' "+str(product)+"\n"
+            response =" 1. \n"
+            response = " 2. \n" 
+            response = " 3. \n"
+        elif text == '2*1':
+            products= Productsmodel.objects.all()
+            product="imyenda"
+            for product in products:
+                response+= ""+str(product.id)+". "+str(product.title)+"\n"
+            response = "CON Hitamo ubwoko bw'umwenda' "+str(product)+"\n"
+            response =" 1. \n"
+            response = " 2. \n" 
+            response = " 3. \n"
+        elif text == '2*2':
+            products= Productsmodel.objects.all()
+            product="imyenda"
+            for product in products:
+                response+= ""+str(product.id)+". "+str(product.title)+"\n"
+            response = "CON Hitamo ubwoko bw'inkweto' "+str(product)+"\n" 
+            response += "1.  \n"
+            response += "2.  \n"
+            response += "3. \n"
         elif text == '2*1':
             response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe rimwe mukwezi"
         elif text == '2*2':
