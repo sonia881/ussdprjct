@@ -33,24 +33,26 @@ def ussdApp(request):
             response += "1. Imyenda \n"
             response += "2. Inkweto \n"
         elif text == '1*1':
-            product="Imyenda"
-            response = "CON Hitamo ubwoko bw'umwenda' "+str(product)+"\n"
-        elif category =='1*1'and int(len(level)) == 3 and str(level[2]) in  str(level):
-            response = "CON Ipantaro \n"
-        elif category =='1*1'and int(len(level)) == 4 and str(level[3]) in  str(level):
-            response = "CON Umupira cyangwa ishati \n"
-        elif category =='1*1'and int(len(level)) == 5 and str(level[4]) in  str(level):
-            response = "Ikanzu \n"
+            products= Productsmodel.objects.all()
+            response ="CON Hitamo umwenda"
+            for product in products:
+                response+= ""+str(product.id)+". "+str(product.title)+"\n"
+            response = "CON Hitamo ubwoko bw'umwenda' "+str(product)+"\n" 
+            response = "1. Ipantaro \n" 
+            response = "2. Umupira cyangwa ishati \n" 
+            response = "3. Ikanzu \n"
 
 
         elif text == '1*2':
             product ="Inkweto"
             response ="CON ' "+str(product)+"\n"
-        elif category =='1*2' and int(len(level)) == 3 and str(level[2]) in  str(level):
+        elif 
             response = "CON  \n"
-        elif category =='1*2' and int(len(level)) == 4 and str(level[3]) in  str(level):
+        elif 
             response = "CON  \n"
-        elif category =='1*2' and int(len(level)) == 5 and str(level[4]) in  str(level):
+        elif 
+
+        
             response = "END Murakoze kwiyandikisha kuri Ida farm \n"
          
         #  ======================== INGENGABIHE==================

@@ -15,3 +15,14 @@ class Idafarmuser(models.Model):
 
     def __str__(self):
         return self.phoneNumber
+
+
+class Productsmodel(models.Model):
+    title=models.CharField(max_length=255,null=True)
+
+    def __str__(self):
+        return self.title
+
+
+
+    
