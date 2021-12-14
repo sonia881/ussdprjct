@@ -25,7 +25,7 @@ def ussdApp(request):
         response =""
         #  main menu for our application
         if text == '':
-            response =  "CON WELCOME ON HAHA APP \n"
+            response =  "CON WELCOME ON HAHA \n"
             response += "1. BUYING \n"
             response += "2. ORDERING AND DELIVERY \n"
         elif text == '1':
