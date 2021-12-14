@@ -25,7 +25,7 @@ def ussdApp(request):
         response =""
         #  main menu for our application
         if text == '':
-            response =  "CON Kugura no gutumiza imyenda n'inkweto by'abakobwa n'abagore \n"
+            response =  "CON WELCOME ON HAHA APP \n"
             response += "1. BUYING \n"
             response += "2. ORDERING AND DELIVERY \n"
         elif text == '1':
@@ -45,22 +45,28 @@ def ussdApp(request):
             response += "2. mampa \n "
             response += "3. suitelike pants \n"
         elif text =='1*1*1*1':
-            response ="CON Enter mode of payment"
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
         elif text =='1*1*1*2':
-            response ="CON Enter mode of payment"
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
         elif text =='1*1*1*3':
-            response ="CON Enter mode of payment"
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
         elif text =='1*1*2':
             response ="CON Which type \n"
             response += "1. jeans \n"
             response += "2. mampa \n "
             response += "3. suitelike shirts \n"
         elif text =='1*1*2*1':
-            response ="CON Enter mode of payment"
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
         elif text =='1*1*2*2':
-            response ="CON Enter mode of payment"
+            response ="CON Enter size andmode of payment"
+            response = "Enter phone number"
         elif text =='1*1*2*3':
-            response ="CON Enter mode of payment"
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
         elif text =='1*1*3':
             response =""
         elif text == '1*2':

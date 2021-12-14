@@ -1,42 +1,25 @@
 from django.db import models
 from datetime import datetime
 # Create your models here.
-class Idafarmuser(models.Model):
+class Haha(models.Model):
     
-    sessiondId = models.CharField(max_length=255, null=True)
-    serviceCode = models.CharField(max_length=255, null=True)
+    #sessiondId = models.CharField(max_length=255, null=True)
+    #serviceCode = models.CharField(max_length=255, null=True)
     phoneNumber = models.CharField(max_length=255)
-    level  = models.CharField(max_length=255)
-    category = models.CharField(max_length=255)
-    sizeOfland = models.CharField(max_length=255)
+    #level  = models.CharField(max_length=255)
+    # category = models.CharField(max_length=255)
     names = models.CharField(max_length=255)
-    idnumber = models.CharField(max_length=255)
+    size = models.IntegerField()
+    paymentMode = models.CharField(max_length=255)
     created_on = models.DateTimeField(default=datetime.now)
 
     def __str__(self):
         return self.phoneNumber
 
 
-class Productsmodel(models.Model):
-    title=models.CharField(max_length=255,null=True)
 
-    def __str__(self):
-        return self.title 
 
-class Product1model(models.Model):
-    title=models.CharField(max_length=255,null=True)
-    
-    def __str__(self):
-        return self.title 
-
-class Product2model(models.Model):
-    title=models.CharField(max_length=255,null=True)
-
-class Product3model(models.Model):
-    title=models.CharField(max_length=255,null=True)
-
-    def __str__(self):
-        return self.title 
+ 
 
 
 
