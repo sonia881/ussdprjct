@@ -35,25 +35,34 @@ def ussdApp(request):
         elif text == '1*1':
             response = "CON Choose type of clothes \n " 
             response += "1. Trousers\n"     
-            response += "2. Shirts \n" 
-            response += "3. Dresses \n"
+            response += "2. Dresses \n" 
+            response += "3. Shirts \n"
             response += "4. T-shirts \n"
             response += "5. Tops \n"
         elif text == '1*1*1':
             response ="CON Which type\n"
             response += "1. jeans \n"
-            response += "2. mampa\n "
-            response += " costumelike pants\n"
+            response += "2. mampa \n "
+            response += "3. suitelike pants \n"
         elif text =='1*1*1*1':
-            response ="CON Enter body measures"
+            response ="CON Enter mode of payment"
+        elif text =='1*1*1*2':
+            response ="CON Enter mode of payment"
+        elif text =='1*1*1*3':
+            response ="CON Enter mode of payment"
         elif text =='1*1*2':
-            response ="CON Enter body measures"
-        elif text =='1*1*2':
-            response ="CON Enter body measures"
-        elif text =='1*1*4':
-            response ="CON Enter body measures"
-        elif text =='1*1*5':
-            response ="CON Enter body measures"         
+            response ="CON Which type \n"
+            response += "1. jeans \n"
+            response += "2. mampa \n "
+            response += "3. suitelike shirts \n"
+        elif text =='1*1*2*1':
+            response ="CON Enter mode of payment"
+        elif text =='1*1*2*2':
+            response ="CON Enter mode of payment"
+        elif text =='1*1*2*3':
+            response ="CON Enter mode of payment"
+        elif text =='1*1*3':
+            response =""
         elif text == '1*2':
             response ="CON Choose type of shoes \n"
             response += " 1. male shoes \n"
@@ -71,7 +80,6 @@ def ussdApp(request):
             response = "CON Choose type of shoes \n" 
             response += "1. Male shoes \n"
             response += "2. Female shoes  \n"
-        
         else:
             response = "END Ukanze ibitaribyo, ongera mukanya"
         return HttpResponse(response)
