@@ -76,13 +76,13 @@ def ussdApp(request):
             response += " 3. wedge \n"
             response += " 4. sandals \n"
         elif text =='1*2*1':
-            response =""
+            response =" CON Enter your size number \n"
         elif text =='1*2*2':
-            response =""
+            response =" CON Enter your size number \n"
         elif text =='1*2*3':
-            response =" "
+            response =" CON Enter your size number \n"
         elif text =='1*2*4':
-            response =""
+            response =" CON Enter your size number \n"
         elif text =='2':
             response = "CON Hitamo \n"
             response += "1. Clothes \n"
@@ -90,12 +90,52 @@ def ussdApp(request):
         elif text == '2*1':
             response = "CON Choose type of clothes \n"
             response +=" 1. Trousers\n"
-            response += " 2. Shirts, T- shirts or Tops\n" 
-            response += " 3. Dresses\n"
+            response += " 2. Shirts\n"
+            response += " 3. T- shirts" 
+            response += " 4. Dresses\n"
+            response += " 5 Tops \n"
+        elif text =='2*1*1':
+            response ="CON Which type \n"
+            response += "1. jeans \n"
+            response += "2. mampa \n "
+            response += "3. suitelike pants \n"
+        elif text =='2*1*1*1':
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
+        elif text =='2*1*1*2':
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
+        elif text =='2*1*1*3':
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
+        elif text =='1*1*2':
+            response ="CON Which type \n"
+            response += "1. jeans \n"
+            response += "2. mampa \n "
+            response += "3. suitelike shirts \n"
+        elif text =='1*1*2*1':
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
+        elif text =='1*1*2*2':
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
+        elif text =='1*1*2*3':
+            response ="CON Enter size and mode of payment"
+            response = "Enter phone number"
         elif text == '2*2':
-            response = "CON Choose type of shoes \n" 
-            response += "1. Male shoes \n"
-            response += "2. Female shoes  \n"
+            response ="CON Choose type of shoes \n"
+            response += " 1. boots \n"
+            response += " 2. high heels \n"
+            response += " 3. wedge \n"
+            response += " 4. sandals \n"
+        elif text =='2*2*1':
+            response =" CON Enter your size number \n"
+        elif text =='2*2*2':
+            response =" CON Enter your size number \n"
+        elif text =='2*2*3':
+            response =" CON Enter your size number \n"
+        elif text =='2*2*4':
+            response =" CON Enter your size number \n"         
         else:
             response = "END Ukanze ibitaribyo, ongera mukanya"
         return HttpResponse(response)
