@@ -114,14 +114,14 @@ def ussdApp(request):
             response += "2. mampa \n "
             response += "3. suitelike shirts \n"
         elif text =='1*1*2*1':
-            response ="CON Enter size and mode of payment"
-            response = "Enter phone number"
+            response ="CON Enter size and mode of payment \n"
+            response = "Enter phone number \n"
         elif text =='1*1*2*2':
-            response ="CON Enter size and mode of payment"
-            response = "Enter phone number"
+            response ="CON Enter size and mode of payment \n"
+            response = "Enter phone number \n"
         elif text =='1*1*2*3':
-            response ="CON Enter size and mode of payment"
-            response = "Enter phone number"
+            response ="CON Enter size and mode of payment \n"
+            response = "Enter phone number \n"
         elif text == '2*2':
             response ="CON Choose type of shoes \n"
             response += " 1. boots \n"
