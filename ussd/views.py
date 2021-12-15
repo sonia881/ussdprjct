@@ -72,15 +72,15 @@ def ussdApp(request):
         elif text == '1*2':
             response ="CON Choose type of shoes \n"
             response += " 1. boots \n"
-        elif text == '1*2*1':
-            response =" "
             response += " 2. high heels \n"
+            response += " 3. wedge \n"
+            response += " 4. sandals \n"
+        elif text =='1*2*1':
+            response =""
         elif text =='1*2*2':
             response =""
-            response += " 3. wedge \n"
         elif text =='1*2*3':
-            response =""
-            response += " 4. sandals \n"
+            response =" "
         elif text =='1*2*4':
             response =""
         elif text =='2':
