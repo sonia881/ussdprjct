@@ -62,7 +62,7 @@ def ussdApp(request):
             response ="CON Enter size and mode of payment"
             response = "Enter phone number"
         elif text =='1*1*2*2':
-            response ="CON Enter size andmode of payment"
+            response ="CON Enter size and mode of payment"
             response = "Enter phone number"
         elif text =='1*1*2*3':
             response ="CON Enter size and mode of payment"
@@ -71,8 +71,18 @@ def ussdApp(request):
             response =""
         elif text == '1*2':
             response ="CON Choose type of shoes \n"
-            response += " 1. male shoes \n"
-            response += " 2. female shoes\n"
+            response += " 1. boots \n"
+        elif text == '1*2*1':
+            response =" "
+            response += " 2. high heels \n"
+        elif text =='1*2*2':
+            response =""
+            response += " 3. wedge \n"
+        elif text =='1*2*3':
+            response =""
+            response += " 4. sandals \n"
+        elif text =='1*2*4':
+            response =""
         elif text =='2':
             response = "CON Hitamo \n"
             response += "1. Clothes \n"
